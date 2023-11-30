@@ -1,0 +1,12 @@
+<div class="card" style="width: 14erm;">
+    <img class="card-img-top" src="{{p.image}}">
+    <div class="card-body">
+        <h5 class="card-title">{{p.title}}</h5>
+        <p class="card-text">{{p.price}}</p>
+        <p class="card-text">{{p.like}}</p>
+
+        <a href="#" class="btn btn-primary">Buy Now</a>
+        <button class="btn btn-primary" (click)="sendDataToFather(p)">like</button>
+    </div>
+
+</div>
