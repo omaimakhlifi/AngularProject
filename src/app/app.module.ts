@@ -15,6 +15,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { MobileComponent } from './mobile/mobile.component';
 import { TVComponent } from './tv/tv.component';
 import { ShowOneProductComponent } from './show-one-product/show-one-product.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import {  HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,13 +31,15 @@ import { ShowOneProductComponent } from './show-one-product/show-one-product.com
     ReactiveFormComponent,
     MobileComponent,
     TVComponent,
-    ShowOneProductComponent
+    ShowOneProductComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

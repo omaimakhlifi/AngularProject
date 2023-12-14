@@ -7,12 +7,15 @@ import { Product } from '../core/model/product';
   styleUrls: ['./show-one-product.component.css']
 })
 export class ShowOneProductComponent {
-  @Input() p!:Product;
-  @Output() notif =new EventEmitter()
-  sendDataToFather(produit:Product){
+  @Input() p!: Product;
+  @Output() notif = new EventEmitter()
+  sendDataToFather(produit: Product) {
     this.notif.emit(produit);
   }
-  
+  showMsgChild() {
+    alert("let's buy some products");
+  }
+
 
 
 }

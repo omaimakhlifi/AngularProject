@@ -1,0 +1,42 @@
+<form [formGroup]="registerForm">
+    <div class="form-group">
+
+        <label>id</label>
+        <input class="form-control" type="text" placeholder="id" formControlName="id">
+        <div class="alert alert-danger"
+            *ngIf="registerForm.controls['id'].invalid && registerForm.controls['id'].touched">
+            <div *ngIf="registerForm.get('id')?.errors?.['required']">
+                the id is a required field
+            </div>
+
+        </div>
+        <label>Title</label>
+        <input class="form-control" type="text" placeholder="Title" formControlName="title">
+        <div class="alert alert-danger"
+            *ngIf="registerForm.controls['title'].invalid && registerForm.controls['title'].touched">
+            the Title is a required field
+        </div>
+        <label>Price</label>
+        <input class="form-control" type="text" placeholder="Price" formControlName="price">
+        <div class="alert alert-danger"
+            *ngIf="registerForm.controls['price'].invalid && registerForm.controls['price'].touched">
+            the Price is a required field
+        </div>
+        <label>Like</label>
+        <input class="form-control" type="text" placeholder="Like" formControlName="like">
+        <div class="alert alert-danger"
+            *ngIf="registerForm.controls['like'].invalid && registerForm.controls['like'].touched">
+            the Like is a required field
+        </div>
+        <label>Quantity</label>
+        <input class="form-control" type="text" placeholder="Quantity" formControlName="quantity">
+        <div class="alert alert-danger"
+            *ngIf="registerForm.controls['quantity'].invalid && registerForm.controls['quantity'].touched">
+            the Quantity is a required field
+        </div>
+
+        <input type="submit" value="save" (click)="ajouter()" [disabled]="this.registerForm.invalid">
+        <input type="submit" class="btn btn-outline-success my-2 my-sm-0" value="cancel">
+    </div>
+
+</form>

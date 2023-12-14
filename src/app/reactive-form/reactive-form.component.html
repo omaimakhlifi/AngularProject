@@ -1,5 +1,3 @@
-<p>reactive-form works!</p>
-
 <label>Login</label>
 <input class="form-control" type="text" placeholder="login" [formControl]="login">
 
@@ -15,7 +13,6 @@
 
     <label>firstName</label>
     <input class="form-control" type="text" placeholder="firstName" formControlName="firstName">
-
     <div class="alert alert-danger" *ngIf="registerForm.controls['firstName'].invalid && registerForm.controls['firstName'].touched">
         <div *ngIf="registerForm.get('firstName')?.errors?.['required']">
             the firstName is a required field
